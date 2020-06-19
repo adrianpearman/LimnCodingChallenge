@@ -1,0 +1,75 @@
+// HEADER SECTION
+.header {
+  padding: 1.5rem 0;
+  background-color: $white;
+  box-shadow: 0.2rem 0.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  position: relative;
+  margin-bottom: 0.5rem;
+
+  &-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-family: "Reader-Bold";
+  }
+
+  &-navigation {
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+
+    &-item {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .header-navigation {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+
+@media (max-width: $tabletSmall) {
+  .header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: $mobileLarge) {
+  .header-navigation {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+
+@media (max-width: $mobileSmall) {
+  .header-navigation-item {
+    font-size: 1rem;
+  }
+}

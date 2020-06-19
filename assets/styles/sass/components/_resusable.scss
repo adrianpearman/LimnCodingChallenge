@@ -1,0 +1,29 @@
+//  REUSEABLE STYLING SECTION
+.btn {
+  padding: 1rem 1.5rem !important;
+  border: 0.1rem solid $black;
+  border-radius: 0.4rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-primary {
+    background: $white;
+    color: $black;
+  }
+  &-secondary {
+    background: $black;
+    color: $white;
+  }
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,37 @@
+// SECTION COMPONENTS
+.section {
+  height: 60rem;
+
+  &-hero {
+    height: 100%;
+    width: 100%;
+    background: url("../../images/HeaderBackgroundImage.png") no-repeat;
+    display: flex;
+  }
+  &-consultation {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.content-container {
+  position: relative;
+}
+
+@media (max-width: $displaySmall) {
+  .section {
+    height: 50rem;
+  }
+}
+
+@media (max-width: $tablet) {
+  .section {
+    height: 45rem;
+  }
+}
+
+@media (max-width: $mobileLarge) {
+  .section {
+    height: 40rem;
+  }
+}
