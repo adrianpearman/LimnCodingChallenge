@@ -8,7 +8,7 @@ const submitButton = document.getElementById("submit-button");
 // Error DOM Elements
 const errorCompany = document.getElementById("error-company");
 const errorEmail = document.getElementById("error-email");
-const errorName = document.getElementById("error-name");
+const errorFullName = document.getElementById("error-name");
 const errorPhone = document.getElementById("error-phone");
 // PopUpForm DOM Elements
 const popUpButton1 = document.getElementById("book-consultation-1");
@@ -39,7 +39,7 @@ const resetAppState = () => {
   emailAddress.value = "";
   fullName.value = "";
   phoneNumber.value = "";
-
+  // Resetting State
   popUpFormState = {
     companyName: null,
     companyNameValid: null,
@@ -50,6 +50,16 @@ const resetAppState = () => {
     phoneNumber: null,
     phoneNumberValid: null,
   };
+  // Resetting DOM Elements
+  companyName.classList.remove("popup-input-error");
+  emailAddress.classList.remove("popup-input-error");
+  fullName.classList.remove("popup-input-error");
+  phoneNumber.classList.remove("popup-input-error");
+  errorCompany.classList.add("hide");
+  errorEmail.classList.add("hide");
+  errorFullName.classList.add("hide");
+  errorPhone.classList.add("hide");
+  popupErrorContainer.classList.add("hide");
 };
 const windowScroll = () => {
   window.scroll({
@@ -110,11 +120,11 @@ const validateFormEntries = (state) => {
   // Setting Valid Name
   if (validate.validateNameLength(state.fullName)) {
     popUpFormState.fullNameValid = true;
-    errorName.classList.add("hide");
+    errorFullName.classList.add("hide");
     fullName.classList.remove("popup-input-error");
   } else {
     popUpFormState.fullNameValid = false;
-    errorName.classList.remove("hide");
+    errorFullName.classList.remove("hide");
     fullName.classList.add("popup-input-error");
   }
   // Setting Valid Phone Number
