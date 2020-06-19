@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./assets/styles/css/styles.css" />
+    <title>Limn Coding Challenge</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header-logo">
+          Brand Name
+        </div>
+        <ul class="header-navigation">
+          <li class="header-navigation-item">About Us</li>
+          <li class="header-navigation-item">Services</li>
+          <li class="header-navigation-item">Case Studies</li>
+          <li class="header-navigation-item">Get in Touch</li>
+          <li
+            class="header-navigation-item btn btn-primary"
+            id="book-consultation-1"
+          >
+            Book a Consultation
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <!-- Consultation Pop Up -->
+      <div class="popup">
+        <div class="popup-form-container">
+          <div class="popup-title-container">
+            <h1 class="popup-title">Book a Consultation</h1>
+            <p class="popup-close-button">X</p>
+          </div>
+          <div class="popup-error-container hide">
+            <h2 class="error-title">
+              Error: Please review the following fields
+            </h2>
+            <p class="error-item" id="error-name">Full Name</p>
+            <p class="error-item" id="error-company">Company Name</p>
+            <p class="error-item" id="error-email">Email Address</p>
+            <p class="error-item" id="error-phone">Phone Number</p>
+          </div>
+          <div class="popup-success-container hide">
+            <h2 class="success">
+              Thank you! A member of our team will reach out to you soon.
+            </h2>
+          </div>
+          <form action="POST" class="popup-form">
+            <div class="popup-form-row">
+              <div class="popup-form-item">
+                <label for="fullName">Full Name</label>
+                <input
+                  class="popup-input"
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  placeholder="First and Last Name"
+                  required
+                />
+              </div>
+              <div class="popup-form-item">
+                <label for="companyName">Company Name</label>
+                <input
+                  class="popup-input"
+                  id="companyName"
+                  name="companyName"
+                  type="text"
+                  placeholder="Company Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="popup-form-row">
+              <div class="popup-form-item">
+                <label for="emailAddress">Email Address</label>
+                <input
+                  class="popup-input"
+                  id="emailAddress"
+                  name="emailAddress"
+                  type="text"
+                  placeholder="email@company.com"
+                  required
+                />
+              </div>
+              <div class="popup-form-item">
+                <label for="phoneNumber">Phone Number</label>
+                <input
+                  class="popup-input"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="text"
+                  placeholder="(555) 555-5555"
+                  maxlength="10"
+                  required
+                />
+              </div>
+            </div>
+            <div class="popup-button-container">
+              <button class="btn btn-secondary" id="submit-button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="section">
+        <div class="section-hero">
+          <div class="hero-image">
+            <div class="hero-image-container">
+              <img src="./assets/images/HeaderImage.png" alt="" />
+            </div>
+          </div>
+          <div class="hero-text">
+            <div class="hero-text-container">
+              <div class="hero-text-content">
+                <h2 class="hero-title">Recent case study // sifive</h2>
+                <p class="hero-content">
+                  Created internal sales operating environment from scratch to
+                  help source over $200m in pipeline revenue overall.
+                </p>
+                <button class="btn btn-secondary">
+                  Learn How
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consultation Section -->
+      <section class="section">
+        <div class="section-consultation">
+          <div class="consultation-container">
+            <h2 class="consultation-title">
+              Turning great products into great businesses
+            </h2>
+            <p class="consultation-text">
+              A lean, modern team of experienced sales leaders and business
+              development consultants who help companies of all sizes
+            </p>
+            <img
+              class="consultation-image"
+              src="./assets/images/BrandLogoStrip.png"
+              alt=""
+            />
+            <button class="btn btn-primary" id="book-consultation-2">
+              Book a Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./scripts/app.js"></script>
+</html>
